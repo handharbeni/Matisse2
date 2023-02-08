@@ -9,7 +9,8 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
-import io.github.handharbeni.matisse2.databinding.FragmentSecondBinding;
+import io.github.handharbeni.matisse.R;
+import io.github.handharbeni.matisse.databinding.FragmentSecondBinding;
 
 public class SecondFragment extends Fragment {
 

@@ -13,7 +13,11 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-import io.github.handharbeni.matisse2.databinding.ActivityMainBinding;
+import io.github.handharbeni.matisse.Matisse;
+import io.github.handharbeni.matisse.MimeType;
+import io.github.handharbeni.matisse.R;
+import io.github.handharbeni.matisse.databinding.ActivityMainBinding;
+import io.github.handharbeni.matisse.engine.impl.GlideEngine;
 
 import android.view.Menu;
 import android.view.MenuItem;
@@ -41,8 +45,14 @@ public class MainActivity extends AppCompatActivity {
 		binding.fab.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
-				Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-				        .setAction("Action", null).show();
+				Matisse.from(MainActivity.this)
+				       .choose(MimeType.ofImage())
+				       .countable(true)
+				       .maxSelectable(11)
+				       .thumbnailScale(0.85f)
+				       .imageEngine(new GlideEngine())
+				       .showPreview(true) // Default is `true`
+				       .forResult(111);
 			}
 		});
 	}

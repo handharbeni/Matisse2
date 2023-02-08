@@ -7,7 +7,7 @@ group='io.github.handharbeni'
 ext {
     // Provide your own coordinates here
     PUBLISH_GROUP_ID = 'io.github.handharbeni'
-    PUBLISH_VERSION = '1.0.0'
+    PUBLISH_VERSION = '1.0.6'
     PUBLISH_ARTIFACT_ID = 'matisse-module'
     PUBLISH_DESCRIPTION = 'Matisse Android'
     PUBLISH_URL = 'https://github.com/handharbeni/matisse2'
@@ -31,7 +31,7 @@ android {
     compileSdk 33
 
     defaultConfig {
-        minSdk 24
+        minSdk 21
         targetSdk 33
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
